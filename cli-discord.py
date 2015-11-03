@@ -1,11 +1,12 @@
 import discord
 import logging
+import sys
 
 # Set up the logging module to output diagnostic to the console.
 logging.basicConfig()
 
 client = discord.Client()
-client.login('pk400@cock.li', 'abc123')
+client.login(str(sys.argv[1]), str(sys.argv[2]))
 
 if not client.is_logged_in:
     print('Logging in to Discord failed')
